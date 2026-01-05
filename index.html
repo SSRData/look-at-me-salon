@@ -27,34 +27,45 @@
 
   <!-- SERVICES -->
   <section id="services" class="services">
-    <h2>Our Services</h2>
+  <h2>Our Services</h2>
 
-    <!-- ACCORDION ITEM -->
-    <div class="accordion">
-      <button class="accordion-header">Hair Services</button>
-      <div class="accordion-body">
-        <div class="service"><span>Haircut</span><span>₹110</span></div>
-        <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
-        <div class="service"><span>Hair Wash</span><span>₹50</span></div>
-      </div>
+  <!-- Hair Services -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">
+      Hair Services
+    </button>
+
+    <div class="menu-content">
+      <div class="service"><span>Haircut</span><span>₹110</span></div>
+      <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
+      <div class="service"><span>Hair Wash</span><span>₹50</span></div>
     </div>
+  </div>
 
-    <div class="accordion">
-      <button class="accordion-header">Beard Services</button>
-      <div class="accordion-body">
-        <div class="service"><span>Beard Trim</span><span>₹70</span></div>
-        <div class="service"><span>Beard Styling</span><span>₹100</span></div>
-      </div>
+  <!-- Beard Services -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">
+      Beard Services
+    </button>
+
+    <div class="menu-content">
+      <div class="service"><span>Beard Trim</span><span>₹70</span></div>
+      <div class="service"><span>Beard Styling</span><span>₹100</span></div>
     </div>
+  </div>
 
-    <div class="accordion">
-      <button class="accordion-header highlight">Combos</button>
-      <div class="accordion-body">
-        <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
-      </div>
+  <!-- Combos -->
+  <div class="menu-group highlight">
+    <button class="menu-title" onclick="toggleMenu(this)">
+      Combos
+    </button>
+
+    <div class="menu-content">
+      <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
     </div>
+  </div>
+</section>
 
-  </section>
 
   <!-- STICKY BOTTOM BAR -->
   <div class="sticky-bar">
@@ -86,3 +97,4 @@
 
 </body>
 </html>
+
