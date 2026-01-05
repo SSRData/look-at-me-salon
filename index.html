@@ -1,102 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Classic Barber Shop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Look At Me Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-inner">
-
-    <div class="brand">
-      <!-- Logo later -->
+  <!-- HERO / HEADER -->
+  <header class="hero">
+    <div class="hero-content">
       <h1>Look At Me Salon</h1>
       <p>Professional Haircuts & Grooming</p>
+
+      <div class="hero-buttons">
+        <a href="tel:+919617570695" class="btn primary">Call Now</a>
+        <button class="btn outline" onclick="toggleServices()">View Services</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES (HIDDEN BY DEFAULT) -->
+  <section id="services" class="services hidden">
+
+    <h2>Our Services</h2>
+
+    <!-- Hair Services -->
+    <div class="menu-group">
+      <h3>Hair Services</h3>
+
+      <div class="service">
+        <span>Haircut</span>
+        <span>₹110</span>
+      </div>
+
+      <div class="service">
+        <span>Kids Haircut</span>
+        <span>₹80</span>
+      </div>
+
+      <div class="service">
+        <span>Hair Wash</span>
+        <span>₹50</span>
+      </div>
     </div>
 
-    <div class="hero-actions">
-      <a href="tel:+919617570695" class="btn primary">Call Now</a>
-      <a href="#services" class="btn outline">View Services</a>
+    <!-- Beard Services -->
+    <div class="menu-group">
+      <h3>Beard Services</h3>
+
+      <div class="service">
+        <span>Beard Trim</span>
+        <span>₹70</span>
+      </div>
+
+      <div class="service">
+        <span>Beard Styling</span>
+        <span>₹100</span>
+      </div>
     </div>
 
-  </div>
-</header>
+    <!-- Combos -->
+    <div class="menu-group highlight">
+      <h3>Combos</h3>
 
-<section id="services" class="services">
-  <h2>Our Services</h2>
+      <div class="service">
+        <span>Haircut + Beard</span>
+        <span>₹160</span>
+      </div>
+    </div>
 
-  <div class="menu-group">
-    <h3>Hair Services</h3>
-    <div class="service"><span>Haircut</span><span>₹110</span></div>
-    <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
-    <div class="service"><span>Hair Wash</span><span>₹50</span></div>
-  </div>
+  </section>
 
-  <div class="menu-group">
-    <h3>Beard Services</h3>
-    <div class="service"><span>Beard Trim</span><span>₹70</span></div>
-    <div class="service"><span>Beard Styling</span><span>₹100</span></div>
-  </div>
-
-  <div class="menu-group highlight">
-    <h3>Combos</h3>
-    <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
-  </div>
-</section>
-
-<section class="contact">
-  <h2>Visit Us</h2>
-  <p>
-    289, Ward 5, Scheme No 51,<br>
-    Indore, Madhya Pradesh 452006
-  </p>
-
-  <a href="https://wa.me/919617570695" class="btn whatsapp">WhatsApp</a>
-  <a href="https://www.instagram.com/ssr_1804" class="btn instagram">Instagram</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=289+Ward+5+Scheme+No+51+Indore" class="btn">
-  Get Directions
-</a>
-
-</section>
-
-<section class="contact">
-  <h2>Why Choose Us</h2>
-  <p>
-    ✔ Experienced barber<br>
-    ✔ Clean & hygienic tools<br>
-    ✔ Affordable pricing<br>
-    ✔ Friendly service
-  </p>
-</section>
-
-  <p><strong>Timings:</strong><br>
-  10:00 AM – 9:00 PM (All Days)</p>
-
-  <a href="https://wa.me/919617570695" class="btn whatsapp">WhatsApp</a>
-  <a href="https://www.instagram.com/ssr_1804" class="btn instagram">Instagram</a>
-</section>
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
-  });
-});
-</script>
-
-<footer>
-  <p>© 2026 Look At Me Salon</p>
-</footer>
+  <!-- SIMPLE JS (ONLY FOR TOGGLE) -->
+  <script>
+    function toggleServices() {
+      const section = document.getElementById("services");
+      section.classList.toggle("hidden");
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 
 </body>
 </html>

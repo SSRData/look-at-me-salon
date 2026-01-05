@@ -5,55 +5,53 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* FULL SITE BACKGROUND */
 body {
   background:
-    linear-gradient(rgba(245,245,245,0.95), rgba(245,245,245,0.95)),
-    url("assets/bg-pattern.jpg") center/cover fixed;
+    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    url("bg-pattern.jpg") center/cover fixed;
   color: #222;
-}
-
-.service:hover {
-  transform: translateY(-2px);
-  transition: 0.2s;
 }
 
 /* HERO */
 .hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("assets/bg.jpg") center/cover no-repeat;
-  padding: 100px 20px;
-}
-
-.hero-inner {
-  max-width: 900px;
-  margin: auto;
+    url("bg-pattern.jpg") center/cover no-repeat;
   text-align: center;
+  padding: 40px 20px;
 }
 
-.brand h1 {
+.hero-content h1 {
+  color: #fff;
   font-size: 42px;
   font-weight: 700;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.9);
 }
 
-.brand p {
-  margin-top: 8px;
+.hero-content p {
   color: #ddd;
+  margin: 12px 0 30px;
 }
-
-.hero-actions {
-  margin-top: 30px;
-}
-
 
 /* BUTTONS */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .btn {
-  display: inline-block;
   padding: 14px 28px;
   border-radius: 30px;
   font-weight: 600;
-  text-decoration: none;
-  margin: 6px;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -64,10 +62,11 @@ body {
 
 .primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(230,57,70,0.4);
+  box-shadow: 0 12px 25px rgba(230,57,70,0.4);
 }
 
 .outline {
+  background: transparent;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -77,118 +76,29 @@ body {
   color: #111;
 }
 
-
-/* SECTION */
-section {
-  padding: 30px 20px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-section {
-  position: relative;
-}
-
-section::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #e63946;
-  margin: 30px auto 0;
-}
-
-
-/* SERVICES */
+/* SERVICES SECTION */
 .services {
-  max-width: 700px;
-  margin: auto;
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 20px;
 }
 
-.service {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 14px 18px;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.service span:first-child {
-  font-weight: 500;
-}
-
-.services h3 {
-  margin: 20px 0 10px;
-  font-size: 16px;
-  color: #444;
-}
-
-/* CONTACT */
-.contact {
-  max-width: 500px;
-  margin: auto;
+.services h2 {
   text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
 }
-
-.contact p {
-  margin-bottom: 18px;
-  color: #555;
-  font-size: 14px;
-}
-
-.contact .btn {
-  margin: 8px 6px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 13px;
-  color: #777;
-}
-
-/* DESKTOP */
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 42px;
-  }
-}
-
-section {
-  animation: fadeUp 0.6s ease;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* MENU */
 
 .menu-group {
   margin-bottom: 30px;
 }
 
 .menu-group h3 {
-  margin-bottom: 10px;
-  color: #555;
+  margin-bottom: 12px;
+  color: #444;
 }
 
+/* SERVICE CARD */
 .service {
   background: #fff;
   padding: 14px 18px;
@@ -196,15 +106,29 @@ section {
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
 
 .service:hover {
   transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
+/* COMBO HIGHLIGHT */
 .highlight {
   border-left: 4px solid #e63946;
   padding-left: 12px;
+}
+
+/* HIDDEN STATE */
+.hidden {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
 }
