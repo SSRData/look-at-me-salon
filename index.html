@@ -20,105 +20,68 @@
 
       <div class="hero-buttons">
         <a href="tel:+918461001090" class="btn primary">Call Now</a>
-        <button class="btn outline" onclick="toggleServices()">View Services</button>
+        <a href="#services" class="btn outline">View Services</a>
       </div>
     </div>
   </header>
 
-  <!-- SERVICES (HIDDEN INITIALLY) -->
-  <section class="services">
-  <h2>Our Services</h2>
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
 
-  <div class="service-category">
-    <h3>Hair Services</h3>
-    <ul>
-      <li><span>Classic Haircut</span><span>₹150</span></li>
-      <li><span>Premium Haircut</span><span>₹200</span></li>
-      <li><span>Kids Haircut</span><span>₹120</span></li>
-      <li><span>Hair Wash & Blow Dry</span><span>₹100</span></li>
-      <li><span>Hair Styling (Gel / Wax / Pomade)</span><span>₹80</span></li>
-      <li><span>Head Shave (Razor Finish)</span><span>₹180</span></li>
-    </ul>
-  </div>
-
-  <div class="service-category">
-    <h3>Beard & Shave</h3>
-    <ul>
-      <li><span>Clean Shave</span><span>₹120</span></li>
-      <li><span>Beard Trim</span><span>₹100</span></li>
-      <li><span>Beard Styling / Beard Set</span><span>₹150</span></li>
-      <li><span>Luxury Beard Grooming</span><span>₹200</span></li>
-      <li><span>Mustache Trim & Shape</span><span>₹50</span></li>
-    </ul>
-  </div>
-
-  <div class="service-category">
-    <h3>Hair & Beard Color</h3>
-    <ul>
-      <li><span>Beard Color</span><span>₹200</span></li>
-      <li><span>Head Hair Color</span><span>₹350</span></li>
-      <li><span>Premium Hair Color (Ammonia-Free)</span><span>₹450</span></li>
-    </ul>
-  </div>
-
-  <div class="service-category">
-    <h3>Skin Care & Detailing</h3>
-    <ul>
-      <li><span>De-Tan Treatment</span><span>₹250</span></li>
-      <li><span>Face Scrub</span><span>₹120</span></li>
-      <li><span>Face Cleanup</span><span>₹200</span></li>
-      <li><span>Facial</span><span>₹350</span></li>
-      <li><span>Steam Therapy</span><span>₹100</span></li>
-      <li><span>Hair Wash with Massage</span><span>₹150</span></li>
-    </ul>
-  </div>
-
-  <div class="service-category">
-    <h3>Massage & Relaxation</h3>
-    <ul>
-      <li><span>Face Massage</span><span>₹150</span></li>
-      <li><span>Head Massage</span><span>₹120</span></li>
-      <li><span>Neck & Shoulder Massage</span><span>₹150</span></li>
-    </ul>
-  </div>
-
-  <div class="service-category">
-    <h3>Grooming & Make-Up</h3>
-    <ul>
-      <li><span>Basic Groom Make-Up</span><span>₹800</span></li>
-      <li><span>Party Groom Make-Up</span><span>₹1,200</span></li>
-      <li><span>Wedding / Engagement Groom Make-Up</span><span>₹2,500</span></li>
-    </ul>
-  </div>
-</section>
-
-
-  <!-- BOTTOM CONTACT SECTION -->
-  <section class="bottom-actions">
-    <h2>Contact & Visit Us</h2>
-
-    <p class="address">
-      Scheme No. 51, near Police Chouki,<br>
-      Sangam Nagar, Indore,<br>
-      Madhya Pradesh 452006
-    </p>
-
-    <div class="action-buttons">
-      <a href="tel:+918461001090" class="btn primary">📞 Book Now</a>
-      <a href="https://wa.me/918461001090" class="btn whatsapp">💬 WhatsApp</a>
-      <a href="https://www.instagram.com/ssr_1804" class="btn instagram">📸 Instagram</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Scheme+No+51+Sangam+Nagar+Indore"
-         class="btn location">📍 Location</a>
+    <!-- ACCORDION ITEM -->
+    <div class="accordion">
+      <button class="accordion-header">Hair Services</button>
+      <div class="accordion-body">
+        <div class="service"><span>Haircut</span><span>₹110</span></div>
+        <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
+        <div class="service"><span>Hair Wash</span><span>₹50</span></div>
+      </div>
     </div>
+
+    <div class="accordion">
+      <button class="accordion-header">Beard Services</button>
+      <div class="accordion-body">
+        <div class="service"><span>Beard Trim</span><span>₹70</span></div>
+        <div class="service"><span>Beard Styling</span><span>₹100</span></div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button class="accordion-header highlight">Combos</button>
+      <div class="accordion-body">
+        <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
+      </div>
+    </div>
+
   </section>
+
+  <!-- STICKY BOTTOM BAR -->
+  <div class="sticky-bar">
+    <a href="tel:+918461001090">📞 Call</a>
+    <a href="https://wa.me/918461001090">💬 WhatsApp</a>
+    <a href="tel:+918461001090">📅 Book</a>
+  </div>
 
   <!-- JS -->
   <script>
-    function toggleServices() {
-      const section = document.getElementById("services");
-      section.classList.toggle("hidden");
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const body = header.nextElementSibling;
+
+        document.querySelectorAll(".accordion-body").forEach(b => {
+          if (b !== body) b.style.maxHeight = null;
+        });
+
+        if (body.style.maxHeight) {
+          body.style.maxHeight = null;
+        } else {
+          body.style.maxHeight = body.scrollHeight + "px";
+        }
+      });
+    });
   </script>
 
 </body>
