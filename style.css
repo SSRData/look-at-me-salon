@@ -5,169 +5,103 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* BACKGROUND */
 body {
   background:
-    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
     url("bg-pattern.jpg") center/cover fixed;
   color: #222;
-  padding-bottom: 80px;
 }
 
 /* HERO */
 .hero {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
   background:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
     url("bg-pattern.jpg") center/cover no-repeat;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-content h1 {
   color: #fff;
-  font-size: 36px;
-  font-weight: 700;
-  text-shadow: 0 6px 20px rgba(0,0,0,0.9);
 }
 
-.hero-content p {
+.hero h1 {
+  font-size: 34px;
+}
+
+.hero p {
+  margin-top: 10px;
   color: #ddd;
-  margin: 12px 0 25px;
-}
-
-/* BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.primary { background: #e63946; color: #fff; }
-.whatsapp { background: #25D366; color: #fff; }
-.instagram { background: #C13584; color: #fff; }
-.location { background: #1e88e5; color: #fff; }
-
-.outline {
-  border: 2px solid #fff;
-  color: #fff;
-  background: transparent;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
 }
 
 /* SERVICES */
 .services {
-  max-width: 720px;
-  margin: 60px auto;
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
 }
 
-.services h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* MENU */
+/* MENU GROUP */
 .menu-group {
   margin-bottom: 20px;
 }
 
 .menu-title {
   width: 100%;
-  background: #fff;
-  border: none;
   padding: 16px;
-  border-radius: 12px;
+  font-size: 16px;
   font-weight: 600;
-  text-align: left;
+  border-radius: 14px;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  text-align: left;
+
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .menu-content {
   display: none;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
+/* SERVICE CARD */
 .service {
-  background: #fafafa;
-  padding: 14px 18px;
-  margin-bottom: 10px;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
 }
 
-/* HIGHLIGHT */
-.highlight {
-  border-left: 4px solid #e63946;
-  padding-left: 10px;
+.service:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-/* BOTTOM ACTIONS */
-.bottom-actions {
-  background: #111;
+/* POPULAR */
+.popular {
+  border-left: 5px solid #e63946;
+  position: relative;
+}
+
+.popular::after {
+  content: "Most Popular";
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: #e63946;
   color: #fff;
-  text-align: center;
-  padding: 40px 20px;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 12px;
 }
 
-.address {
-  color: #ccc;
-  font-size: 14px;
-  margin: 15px 0 25px;
-  line-height: 1.6;
-}
-
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 320px;
-  margin: auto;
-}
-
-/* STICKY BAR */
-.sticky-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #111;
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 0;
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
-
-.sticky-bar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-/* HIDE STICKY ON DESKTOP */
-@media (min-width: 768px) {
-  .sticky-bar {
-    display: none;
-  }
+/* COMBO HIGHLIGHT */
+.highlight .menu-title {
+  border-left: 5px solid #e63946;
 }
