@@ -14,25 +14,42 @@
 <body>
 
 <header class="hero">
-  <h1>Look At Me Salon</h1>
-  <p>Professional Haircuts & Grooming</p>
-  <a href="tel:+919617570695" class="btn">Call Now</a>
+  <div class="hero-inner">
+
+    <div class="brand">
+      <!-- Logo later -->
+      <h1>Look At Me Salon</h1>
+      <p>Professional Haircuts & Grooming</p>
+    </div>
+
+    <div class="hero-actions">
+      <a href="tel:+919617570695" class="btn primary">Call Now</a>
+      <a href="#services" class="btn outline">View Services</a>
+    </div>
+
+  </div>
 </header>
 
-<section class="services">
+<section id="services" class="services">
   <h2>Our Services</h2>
 
-  <h3>Hair Services</h3>
-  <div class="service"><span>Haircut</span><span>₹110</span></div>
-  <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
-  <div class="service"><span>Hair Wash</span><span>₹50</span></div>
+  <div class="menu-group">
+    <h3>Hair Services</h3>
+    <div class="service"><span>Haircut</span><span>₹110</span></div>
+    <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
+    <div class="service"><span>Hair Wash</span><span>₹50</span></div>
+  </div>
 
-  <h3>Beard Services</h3>
-  <div class="service"><span>Beard Trim</span><span>₹70</span></div>
-  <div class="service"><span>Beard Styling</span><span>₹100</span></div>
+  <div class="menu-group">
+    <h3>Beard Services</h3>
+    <div class="service"><span>Beard Trim</span><span>₹70</span></div>
+    <div class="service"><span>Beard Styling</span><span>₹100</span></div>
+  </div>
 
-  <h3>Combos</h3>
-  <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
+  <div class="menu-group highlight">
+    <h3>Combos</h3>
+    <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
+  </div>
 </section>
 
 <section class="contact">
@@ -58,6 +75,7 @@
     ✔ Affordable pricing<br>
     ✔ Friendly service
   </p>
+</section>
 
   <p><strong>Timings:</strong><br>
   10:00 AM – 9:00 PM (All Days)</p>
@@ -66,6 +84,15 @@
   <a href="https://www.instagram.com/ssr_1804" class="btn instagram">Instagram</a>
 </section>
 
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
 
 <footer>
   <p>© 2026 Look At Me Salon</p>

@@ -6,7 +6,9 @@
 }
 
 body {
-  background: #f4f4f4;
+  background:
+    linear-gradient(rgba(245,245,245,0.95), rgba(245,245,245,0.95)),
+    url("assets/bg-pattern.jpg") center/cover fixed;
   color: #222;
 }
 
@@ -17,49 +19,64 @@ body {
 
 /* HERO */
 .hero {
-  background: 
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
     url("assets/bg.jpg") center/cover no-repeat;
-  color: #fff;
+  padding: 100px 20px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  padding: 80px 20px;
 }
 
-.hero h1 {
-  font-size: 32px;
+.brand h1 {
+  font-size: 42px;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
-.hero p {
-  margin: 12px 0 25px;
-  color: #ccc;
-  font-size: 15px;
+.brand p {
+  margin-top: 8px;
+  color: #ddd;
 }
+
+.hero-actions {
+  margin-top: 30px;
+}
+
 
 /* BUTTONS */
 .btn {
   display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+
+.primary {
   background: #e63946;
   color: #fff;
-  padding: 14px 26px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(230,57,70,0.4);
 }
 
-.whatsapp {
-  background: #25D366;
+.outline {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
-.instagram {
-  background: #C13584;
+.outline:hover {
+  background: #fff;
+  color: #111;
 }
+
 
 /* SECTION */
 section {
@@ -73,9 +90,23 @@ h2 {
   font-weight: 600;
 }
 
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e63946;
+  margin: 30px auto 0;
+}
+
+
 /* SERVICES */
 .services {
-  max-width: 500px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -147,3 +178,33 @@ section {
   }
 }
 
+/* MENU */
+
+.menu-group {
+  margin-bottom: 30px;
+}
+
+.menu-group h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.service {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.highlight {
+  border-left: 4px solid #e63946;
+  padding-left: 12px;
+}
