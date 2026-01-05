@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Look At Me Salon</title>
+  <title>Look At Me Salon – Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font -->
@@ -12,107 +12,230 @@
 </head>
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Look At Me Salon</h1>
-      <p>Professional Haircuts & Grooming</p>
+<header class="hero">
+  <div class="hero-content">
+    <h1>💈 Our Services</h1>
+    <p>Premium Grooming • Professional Care</p>
+  </div>
+</header>
 
-      <div class="hero-buttons">
-        <a href="tel:+918461001090" class="btn primary">Call Now</a>
-        <a href="#services" class="btn outline">View Services</a>
+<section class="services">
+
+  <!-- Hair Services -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">✂️ Hair Services</button>
+    <div class="menu-content">
+
+      <div class="service popular">
+        <span>Classic Haircut</span>
+        <span>₹150</span>
       </div>
-    </div>
-  </header>
 
-  <!-- SERVICES -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-
-    <!-- Hair -->
-    <div class="menu-group">
-      <button class="menu-title" onclick="toggleMenu(this)">Hair Services</button>
-      <div class="menu-content">
-        <div class="service"><span>Haircut</span><span>₹110</span></div>
-        <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
-        <div class="service"><span>Hair Wash</span><span>₹50</span></div>
+      <div class="service popular">
+        <span>Premium Haircut</span>
+        <span>₹200</span>
       </div>
-    </div>
 
-    <!-- Beard -->
-    <div class="menu-group">
-      <button class="menu-title" onclick="toggleMenu(this)">Beard Services</button>
-      <div class="menu-content">
-        <div class="service"><span>Beard Trim</span><span>₹70</span></div>
-        <div class="service"><span>Beard Styling</span><span>₹100</span></div>
+      <div class="service">
+        <span>Kids Haircut</span>
+        <span>₹120</span>
       </div>
-    </div>
 
-    <!-- Combos -->
-    <div class="menu-group highlight">
-      <button class="menu-title" onclick="toggleMenu(this)">Combos</button>
-      <div class="menu-content">
-        <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
+      <div class="service">
+        <span>Hair Wash & Blow Dry</span>
+        <span>₹100</span>
       </div>
+
+      <div class="service">
+        <span>Hair Styling (Gel / Wax / Pomade)</span>
+        <span>₹80</span>
+      </div>
+
+      <div class="service">
+        <span>Head Shave (Razor Finish)</span>
+        <span>₹180</span>
+      </div>
+
     </div>
-  </section>
-
-  <!-- CONTACT / FOOTER -->
-  <section class="bottom-actions">
-    <h2>Contact & Visit Us</h2>
-
-    <p class="address">
-      Scheme No. 51, near Police Chouki,<br>
-      Sangam Nagar, Indore,<br>
-      Madhya Pradesh 452006
-    </p>
-
-    <div class="action-buttons">
-      <a href="tel:+918461001090" class="btn primary">📞 Book Now</a>
-      <a href="https://wa.me/918461001090" class="btn whatsapp">💬 WhatsApp</a>
-      <a href="https://www.instagram.com/ssr_1804" class="btn instagram">📸 Instagram</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Scheme+No+51+Sangam+Nagar+Indore"
-         class="btn location">📍 Location</a>
-    </div>
-  </section>
-
-  <!-- STICKY BAR -->
-  <div class="sticky-bar" id="stickyBar">
-    <a href="tel:+918461001090">📞 Call</a>
-    <a href="https://wa.me/918461001090">💬 WhatsApp</a>
-    <a href="tel:+918461001090">📅 Book</a>
   </div>
 
-  <!-- JS -->
-  <script>
-    // ACCORDION
-    function toggleMenu(button) {
-      const content = button.nextElementSibling;
+  <!-- Beard -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">🧔 Beard & Shave Services</button>
+    <div class="menu-content">
 
-      document.querySelectorAll('.menu-content').forEach(menu => {
-        if (menu !== content) menu.style.display = "none";
-      });
+      <div class="service popular">
+        <span>Clean Shave</span>
+        <span>₹120</span>
+      </div>
 
-      content.style.display =
-        content.style.display === "block" ? "none" : "block";
-    }
+      <div class="service">
+        <span>Beard Trim</span>
+        <span>₹100</span>
+      </div>
 
-    // STICKY BAR SHOW / HIDE ON SCROLL
-    let lastScroll = 0;
-    const stickyBar = document.getElementById("stickyBar");
+      <div class="service popular">
+        <span>Beard Styling / Beard Set</span>
+        <span>₹150</span>
+      </div>
 
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
+      <div class="service">
+        <span>Luxury Beard Grooming</span>
+        <span>₹200</span>
+      </div>
 
-      if (currentScroll > lastScroll) {
-        stickyBar.style.transform = "translateY(100%)";
-      } else {
-        stickyBar.style.transform = "translateY(0)";
-      }
+      <div class="service">
+        <span>Mustache Trim & Shape</span>
+        <span>₹50</span>
+      </div>
 
-      lastScroll = currentScroll;
-    });
-  </script>
+    </div>
+  </div>
+
+  <!-- Color -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">🎨 Hair & Beard Color</button>
+    <div class="menu-content">
+
+      <div class="service">
+        <span>Beard Color</span>
+        <span>₹200</span>
+      </div>
+
+      <div class="service popular">
+        <span>Head Hair Color</span>
+        <span>₹350</span>
+      </div>
+
+      <div class="service">
+        <span>Premium Hair Color (Ammonia-Free)</span>
+        <span>₹450</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Skin -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">🌿 Skin Care & Detailing</button>
+    <div class="menu-content">
+
+      <div class="service popular">
+        <span>De-Tan Treatment</span>
+        <span>₹250</span>
+      </div>
+
+      <div class="service">
+        <span>Face Scrub</span>
+        <span>₹120</span>
+      </div>
+
+      <div class="service">
+        <span>Face Cleanup</span>
+        <span>₹200</span>
+      </div>
+
+      <div class="service popular">
+        <span>Facial</span>
+        <span>₹350</span>
+      </div>
+
+      <div class="service">
+        <span>Steam Therapy</span>
+        <span>₹100</span>
+      </div>
+
+      <div class="service">
+        <span>Hair Wash with Massage</span>
+        <span>₹150</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Massage -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">💆 Massage & Relaxation</button>
+    <div class="menu-content">
+
+      <div class="service popular">
+        <span>Face Massage</span>
+        <span>₹150</span>
+      </div>
+
+      <div class="service">
+        <span>Head Massage</span>
+        <span>₹120</span>
+      </div>
+
+      <div class="service">
+        <span>Neck & Shoulder Massage</span>
+        <span>₹150</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Groom -->
+  <div class="menu-group">
+    <button class="menu-title" onclick="toggleMenu(this)">✨ Grooming & Make-Up</button>
+    <div class="menu-content">
+
+      <div class="service">
+        <span>Basic Groom Make-Up</span>
+        <span>₹800</span>
+      </div>
+
+      <div class="service popular">
+        <span>Party Groom Make-Up</span>
+        <span>₹1,200</span>
+      </div>
+
+      <div class="service">
+        <span>Wedding / Engagement Groom Make-Up</span>
+        <span>₹2,500</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Combos -->
+  <div class="menu-group highlight">
+    <button class="menu-title" onclick="toggleMenu(this)">👑 Combo Packages</button>
+    <div class="menu-content">
+
+      <div class="service popular">
+        <span>Classic Groom Package</span>
+        <span>₹300</span>
+      </div>
+
+      <div class="service popular">
+        <span>Luxury Groom Package</span>
+        <span>₹550</span>
+      </div>
+
+      <div class="service">
+        <span>Royal Groom Package</span>
+        <span>₹1,500</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<script>
+function toggleMenu(button) {
+  const content = button.nextElementSibling;
+
+  document.querySelectorAll('.menu-content').forEach(menu => {
+    if (menu !== content) menu.style.display = "none";
+  });
+
+  content.style.display =
+    content.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
