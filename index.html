@@ -27,48 +27,57 @@
 
   <!-- SERVICES -->
   <section id="services" class="services">
-  <h2>Our Services</h2>
+    <h2>Our Services</h2>
 
-  <!-- Hair Services -->
-  <div class="menu-group">
-    <button class="menu-title" onclick="toggleMenu(this)">
-      Hair Services
-    </button>
-
-    <div class="menu-content">
-      <div class="service"><span>Haircut</span><span>₹110</span></div>
-      <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
-      <div class="service"><span>Hair Wash</span><span>₹50</span></div>
+    <!-- Hair -->
+    <div class="menu-group">
+      <button class="menu-title" onclick="toggleMenu(this)">Hair Services</button>
+      <div class="menu-content">
+        <div class="service"><span>Haircut</span><span>₹110</span></div>
+        <div class="service"><span>Kids Haircut</span><span>₹80</span></div>
+        <div class="service"><span>Hair Wash</span><span>₹50</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Beard Services -->
-  <div class="menu-group">
-    <button class="menu-title" onclick="toggleMenu(this)">
-      Beard Services
-    </button>
-
-    <div class="menu-content">
-      <div class="service"><span>Beard Trim</span><span>₹70</span></div>
-      <div class="service"><span>Beard Styling</span><span>₹100</span></div>
+    <!-- Beard -->
+    <div class="menu-group">
+      <button class="menu-title" onclick="toggleMenu(this)">Beard Services</button>
+      <div class="menu-content">
+        <div class="service"><span>Beard Trim</span><span>₹70</span></div>
+        <div class="service"><span>Beard Styling</span><span>₹100</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Combos -->
-  <div class="menu-group highlight">
-    <button class="menu-title" onclick="toggleMenu(this)">
-      Combos
-    </button>
-
-    <div class="menu-content">
-      <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
+    <!-- Combos -->
+    <div class="menu-group highlight">
+      <button class="menu-title" onclick="toggleMenu(this)">Combos</button>
+      <div class="menu-content">
+        <div class="service"><span>Haircut + Beard</span><span>₹160</span></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- CONTACT / FOOTER -->
+  <section class="bottom-actions">
+    <h2>Contact & Visit Us</h2>
 
-  <!-- STICKY BOTTOM BAR -->
-  <div class="sticky-bar">
+    <p class="address">
+      Scheme No. 51, near Police Chouki,<br>
+      Sangam Nagar, Indore,<br>
+      Madhya Pradesh 452006
+    </p>
+
+    <div class="action-buttons">
+      <a href="tel:+918461001090" class="btn primary">📞 Book Now</a>
+      <a href="https://wa.me/918461001090" class="btn whatsapp">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/ssr_1804" class="btn instagram">📸 Instagram</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Scheme+No+51+Sangam+Nagar+Indore"
+         class="btn location">📍 Location</a>
+    </div>
+  </section>
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar" id="stickyBar">
     <a href="tel:+918461001090">📞 Call</a>
     <a href="https://wa.me/918461001090">💬 WhatsApp</a>
     <a href="tel:+918461001090">📅 Book</a>
@@ -76,25 +85,34 @@
 
   <!-- JS -->
   <script>
-    const headers = document.querySelectorAll(".accordion-header");
+    // ACCORDION
+    function toggleMenu(button) {
+      const content = button.nextElementSibling;
 
-    headers.forEach(header => {
-      header.addEventListener("click", () => {
-        const body = header.nextElementSibling;
-
-        document.querySelectorAll(".accordion-body").forEach(b => {
-          if (b !== body) b.style.maxHeight = null;
-        });
-
-        if (body.style.maxHeight) {
-          body.style.maxHeight = null;
-        } else {
-          body.style.maxHeight = body.scrollHeight + "px";
-        }
+      document.querySelectorAll('.menu-content').forEach(menu => {
+        if (menu !== content) menu.style.display = "none";
       });
+
+      content.style.display =
+        content.style.display === "block" ? "none" : "block";
+    }
+
+    // STICKY BAR SHOW / HIDE ON SCROLL
+    let lastScroll = 0;
+    const stickyBar = document.getElementById("stickyBar");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll) {
+        stickyBar.style.transform = "translateY(100%)";
+      } else {
+        stickyBar.style.transform = "translateY(0)";
+      }
+
+      lastScroll = currentScroll;
     });
   </script>
 
 </body>
 </html>
-
