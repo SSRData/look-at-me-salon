@@ -5,10 +5,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* FULL SITE BACKGROUND */
+/* BACKGROUND */
 body {
   background:
-    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     url("bg-pattern.jpg") center/cover fixed;
   color: #222;
 }
@@ -28,14 +28,14 @@ body {
 
 .hero-content h1 {
   color: #fff;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 700;
   text-shadow: 0 6px 20px rgba(0,0,0,0.9);
 }
 
 .hero-content p {
   color: #ddd;
-  margin: 12px 0 30px;
+  margin: 12px 0 28px;
 }
 
 /* BUTTONS */
@@ -52,6 +52,7 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -76,7 +77,7 @@ body {
   color: #111;
 }
 
-/* SERVICES SECTION */
+/* SERVICES */
 .services {
   max-width: 750px;
   margin: 60px auto;
@@ -86,7 +87,6 @@ body {
 .services h2 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 26px;
 }
 
 .menu-group {
@@ -98,7 +98,6 @@ body {
   color: #444;
 }
 
-/* SERVICE CARD */
 .service {
   background: #fff;
   padding: 14px 18px;
@@ -107,23 +106,57 @@ body {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
 }
 
-.service:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-/* COMBO HIGHLIGHT */
 .highlight {
   border-left: 4px solid #e63946;
   padding-left: 12px;
 }
 
-/* HIDDEN STATE */
 .hidden {
   display: none;
+}
+
+/* BOTTOM SECTION */
+.bottom-actions {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.bottom-actions h2 {
+  margin-bottom: 15px;
+}
+
+.address {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 320px;
+  margin: auto;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.instagram {
+  background: #C13584;
+  color: #fff;
+}
+
+.location {
+  background: #1e88e5;
+  color: #fff;
 }
 
 /* MOBILE */
