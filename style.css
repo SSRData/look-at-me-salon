@@ -79,9 +79,10 @@ body {
 
 /* SERVICES */
 .services {
-  max-width: 750px;
-  margin: 60px auto;
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
 }
 
 .services h2 {
@@ -89,32 +90,26 @@ body {
   margin-bottom: 30px;
 }
 
-.menu-group {
-  margin-bottom: 30px;
+.service-category {
+  margin-bottom: 25px;
 }
 
-.menu-group h3 {
-  margin-bottom: 12px;
-  color: #444;
+.service-category h3 {
+  border-bottom: 2px solid #c59d5f;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.service {
-  background: #fff;
-  padding: 14px 18px;
-  border-radius: 12px;
-  margin-bottom: 12px;
+.service-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-category li {
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.highlight {
-  border-left: 4px solid #e63946;
-  padding-left: 12px;
-}
-
-.hidden {
-  display: none;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
 }
 
 /* BOTTOM SECTION */
