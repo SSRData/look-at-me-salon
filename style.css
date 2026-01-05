@@ -11,7 +11,7 @@ body {
     linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     url("bg-pattern.jpg") center/cover fixed;
   color: #222;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 /* HERO */
@@ -31,6 +31,7 @@ body {
   color: #fff;
   font-size: 36px;
   font-weight: 700;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.9);
 }
 
 .hero-content p {
@@ -50,22 +51,24 @@ body {
   padding: 14px 28px;
   border-radius: 30px;
   font-weight: 600;
+  border: none;
   text-decoration: none;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.primary {
-  background: #e63946;
-  color: #fff;
-}
+.primary { background: #e63946; color: #fff; }
+.whatsapp { background: #25D366; color: #fff; }
+.instagram { background: #C13584; color: #fff; }
+.location { background: #1e88e5; color: #fff; }
 
 .outline {
   border: 2px solid #fff;
   color: #fff;
+  background: transparent;
 }
 
-.primary:hover,
-.outline:hover {
+.btn:hover {
   transform: translateY(-2px);
 }
 
@@ -81,16 +84,16 @@ body {
   margin-bottom: 30px;
 }
 
-/* ACCORDION */
-.accordion {
-  margin-bottom: 15px;
+/* MENU */
+.menu-group {
+  margin-bottom: 20px;
 }
 
-.accordion-header {
+.menu-title {
   width: 100%;
-  padding: 16px;
   background: #fff;
   border: none;
+  padding: 16px;
   border-radius: 12px;
   font-weight: 600;
   text-align: left;
@@ -98,24 +101,47 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.06);
 }
 
-.accordion-header.highlight {
-  border-left: 4px solid #e63946;
+.menu-content {
+  display: none;
+  margin-top: 10px;
 }
 
-.accordion-body {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease;
-}
-
-/* SERVICE CARD */
 .service {
   background: #fafafa;
   padding: 14px 18px;
-  margin: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  border-left: 4px solid #e63946;
+  padding-left: 10px;
+}
+
+/* BOTTOM ACTIONS */
+.bottom-actions {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.address {
+  color: #ccc;
+  font-size: 14px;
+  margin: 15px 0 25px;
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 320px;
+  margin: auto;
 }
 
 /* STICKY BAR */
@@ -128,6 +154,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 12px 0;
+  transition: transform 0.3s ease;
   z-index: 1000;
 }
 
@@ -138,25 +165,9 @@ body {
   font-size: 14px;
 }
 
-/* MOBILE */
+/* HIDE STICKY ON DESKTOP */
 @media (min-width: 768px) {
   .sticky-bar {
     display: none;
   }
-}
-
-.menu-title {
-  width: 100%;
-  background: none;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: left;
-  padding: 10px 0;
-  cursor: pointer;
-}
-
-.menu-content {
-  display: none;
-  margin-top: 10px;
 }
