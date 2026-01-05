@@ -11,6 +11,7 @@ body {
     linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     url("bg-pattern.jpg") center/cover fixed;
   color: #222;
+  padding-bottom: 70px;
 }
 
 /* HERO */
@@ -28,21 +29,20 @@ body {
 
 .hero-content h1 {
   color: #fff;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 700;
-  text-shadow: 0 6px 20px rgba(0,0,0,0.9);
 }
 
 .hero-content p {
   color: #ddd;
-  margin: 12px 0 28px;
+  margin: 12px 0 25px;
 }
 
 /* BUTTONS */
 .hero-buttons {
   display: flex;
-  justify-content: center;
   gap: 15px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -50,10 +50,8 @@ body {
   padding: 14px 28px;
   border-radius: 30px;
   font-weight: 600;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .primary {
@@ -61,28 +59,21 @@ body {
   color: #fff;
 }
 
-.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(230,57,70,0.4);
-}
-
 .outline {
-  background: transparent;
   border: 2px solid #fff;
   color: #fff;
 }
 
+.primary:hover,
 .outline:hover {
-  background: #fff;
-  color: #111;
+  transform: translateY(-2px);
 }
 
 /* SERVICES */
 .services {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  font-family: Arial, sans-serif;
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 20px;
 }
 
 .services h2 {
@@ -90,73 +81,66 @@ body {
   margin-bottom: 30px;
 }
 
-.service-category {
-  margin-bottom: 25px;
-}
-
-.service-category h3 {
-  border-bottom: 2px solid #c59d5f;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.service-category ul {
-  list-style: none;
-  padding: 0;
-}
-
-.service-category li {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px dashed #ccc;
-}
-
-/* BOTTOM SECTION */
-.bottom-actions {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.bottom-actions h2 {
+/* ACCORDION */
+.accordion {
   margin-bottom: 15px;
 }
 
-.address {
-  font-size: 14px;
-  color: #ccc;
-  margin-bottom: 25px;
-  line-height: 1.6;
+.accordion-header {
+  width: 100%;
+  padding: 16px;
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
 }
 
-.action-buttons {
+.accordion-header.highlight {
+  border-left: 4px solid #e63946;
+}
+
+.accordion-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+/* SERVICE CARD */
+.service {
+  background: #fafafa;
+  padding: 14px 18px;
+  margin: 10px;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 320px;
-  margin: auto;
+  justify-content: space-between;
 }
 
-.whatsapp {
-  background: #25D366;
-  color: #fff;
+/* STICKY BAR */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 1000;
 }
 
-.instagram {
-  background: #C13584;
+.sticky-bar a {
   color: #fff;
-}
-
-.location {
-  background: #1e88e5;
-  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 32px;
+@media (min-width: 768px) {
+  .sticky-bar {
+    display: none;
   }
 }
