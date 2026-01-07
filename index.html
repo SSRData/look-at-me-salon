@@ -2,241 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Look At Me Salon – Services</title>
+  <title>Look At Me Salon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HERO -->
 <header class="hero">
-  <div class="hero-content">
-    <h1>Look At Me Salon – Services</h1>
+  <div class="hero-overlay">
+    <h1>Look At Me Salon</h1>
     <p>Premium Grooming • Professional Care</p>
   </div>
 </header>
 
+<!-- SERVICES -->
 <section class="services">
 
-  <!-- Hair Services -->
   <div class="menu-group">
     <button class="menu-title" onclick="toggleMenu(this)">✂️ Hair Services</button>
     <div class="menu-content">
-
-      <div class="service popular">
-        <span>Classic Haircut</span>
-        <span>₹150</span>
-      </div>
-
-      <div class="service popular">
-        <span>Premium Haircut</span>
-        <span>₹200</span>
-      </div>
-
-      <div class="service">
-        <span>Kids Haircut</span>
-        <span>₹120</span>
-      </div>
-
-      <div class="service">
-        <span>Hair Wash & Blow Dry</span>
-        <span>₹100</span>
-      </div>
-
-      <div class="service">
-        <span>Hair Styling (Gel / Wax / Pomade)</span>
-        <span>₹80</span>
-      </div>
-
-      <div class="service">
-        <span>Head Shave (Razor Finish)</span>
-        <span>₹180</span>
-      </div>
-
+      <div class="service popular"><span>Classic Haircut</span><span>₹150</span></div>
+      <div class="service popular"><span>Premium Haircut</span><span>₹200</span></div>
+      <div class="service"><span>Kids Haircut</span><span>₹120</span></div>
+      <div class="service"><span>Hair Wash & Blow Dry</span><span>₹100</span></div>
+      <div class="service"><span>Hair Styling</span><span>₹80</span></div>
+      <div class="service"><span>Head Shave (Razor)</span><span>₹180</span></div>
     </div>
   </div>
 
-  <!-- Beard -->
   <div class="menu-group">
     <button class="menu-title" onclick="toggleMenu(this)">🧔 Beard & Shave Services</button>
     <div class="menu-content">
-
-      <div class="service popular">
-        <span>Clean Shave</span>
-        <span>₹120</span>
-      </div>
-
-      <div class="service">
-        <span>Beard Trim</span>
-        <span>₹100</span>
-      </div>
-
-      <div class="service popular">
-        <span>Beard Styling / Beard Set</span>
-        <span>₹150</span>
-      </div>
-
-      <div class="service">
-        <span>Luxury Beard Grooming</span>
-        <span>₹200</span>
-      </div>
-
-      <div class="service">
-        <span>Mustache Trim & Shape</span>
-        <span>₹50</span>
-      </div>
-
+      <div class="service popular"><span>Clean Shave</span><span>₹120</span></div>
+      <div class="service"><span>Beard Trim</span><span>₹100</span></div>
+      <div class="service popular"><span>Beard Styling</span><span>₹150</span></div>
+      <div class="service"><span>Luxury Beard Grooming</span><span>₹200</span></div>
+      <div class="service"><span>Mustache Trim</span><span>₹50</span></div>
     </div>
   </div>
 
-  <!-- Color -->
   <div class="menu-group">
     <button class="menu-title" onclick="toggleMenu(this)">🎨 Hair & Beard Color</button>
     <div class="menu-content">
-
-      <div class="service">
-        <span>Beard Color</span>
-        <span>₹200</span>
-      </div>
-
-      <div class="service popular">
-        <span>Head Hair Color</span>
-        <span>₹350</span>
-      </div>
-
-      <div class="service">
-        <span>Premium Hair Color (Ammonia-Free)</span>
-        <span>₹450</span>
-      </div>
-
+      <div class="service"><span>Beard Color</span><span>₹200</span></div>
+      <div class="service popular"><span>Head Hair Color</span><span>₹350</span></div>
+      <div class="service"><span>Premium Hair Color</span><span>₹450</span></div>
     </div>
   </div>
 
-  <!-- Skin -->
   <div class="menu-group">
     <button class="menu-title" onclick="toggleMenu(this)">🌿 Skin Care & Detailing</button>
     <div class="menu-content">
-
-      <div class="service popular">
-        <span>De-Tan Treatment</span>
-        <span>₹250</span>
-      </div>
-
-      <div class="service">
-        <span>Face Scrub</span>
-        <span>₹120</span>
-      </div>
-
-      <div class="service">
-        <span>Face Cleanup</span>
-        <span>₹200</span>
-      </div>
-
-      <div class="service popular">
-        <span>Facial</span>
-        <span>₹350</span>
-      </div>
-
-      <div class="service">
-        <span>Steam Therapy</span>
-        <span>₹100</span>
-      </div>
-
-      <div class="service">
-        <span>Hair Wash with Massage</span>
-        <span>₹150</span>
-      </div>
-
+      <div class="service popular"><span>De-Tan Treatment</span><span>₹250</span></div>
+      <div class="service"><span>Face Scrub</span><span>₹120</span></div>
+      <div class="service"><span>Face Cleanup</span><span>₹200</span></div>
+      <div class="service popular"><span>Facial</span><span>₹350</span></div>
+      <div class="service"><span>Steam Therapy</span><span>₹100</span></div>
     </div>
   </div>
 
-  <!-- Massage -->
   <div class="menu-group">
-    <button class="menu-title" onclick="toggleMenu(this)">💆 Massage & Relaxation</button>
-    <div class="menu-content">
-
-      <div class="service popular">
-        <span>Face Massage</span>
-        <span>₹150</span>
-      </div>
-
-      <div class="service">
-        <span>Head Massage</span>
-        <span>₹120</span>
-      </div>
-
-      <div class="service">
-        <span>Neck & Shoulder Massage</span>
-        <span>₹150</span>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Groom -->
-  <div class="menu-group">
-    <button class="menu-title" onclick="toggleMenu(this)">✨ Grooming & Make-Up</button>
-    <div class="menu-content">
-
-      <div class="service">
-        <span>Basic Groom Make-Up</span>
-        <span>₹800</span>
-      </div>
-
-      <div class="service popular">
-        <span>Party Groom Make-Up</span>
-        <span>₹1,200</span>
-      </div>
-
-      <div class="service">
-        <span>Wedding / Engagement Groom Make-Up</span>
-        <span>₹2,500</span>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Combos -->
-  <div class="menu-group highlight">
     <button class="menu-title" onclick="toggleMenu(this)">👑 Combo Packages</button>
     <div class="menu-content">
-
-      <div class="service popular">
-        <span>Classic Groom Package</span>
-        <span>₹300</span>
-      </div>
-
-      <div class="service popular">
-        <span>Luxury Groom Package</span>
-        <span>₹550</span>
-      </div>
-
-      <div class="service">
-        <span>Royal Groom Package</span>
-        <span>₹1,500</span>
-      </div>
-
+      <div class="service popular"><span>Classic Groom Package</span><span>₹300</span></div>
+      <div class="service popular"><span>Luxury Groom Package</span><span>₹550</span></div>
+      <div class="service"><span>Royal Groom Package</span><span>₹1,500</span></div>
     </div>
   </div>
 
 </section>
 
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <a href="tel:+918461001090">📞</a>
+  <a href="https://wa.me/918461001090">💬</a>
+  <a href="tel:+918461001090">📅</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Scheme+No+51+Sangam+Nagar+Indore">📍</a>
+  <a href="https://www.instagram.com/ssr_1804">📸</a>
+</div>
+
 <script>
-function toggleMenu(button) {
-  const content = button.nextElementSibling;
-
-  document.querySelectorAll('.menu-content').forEach(menu => {
-    if (menu !== content) menu.style.display = "none";
+function toggleMenu(btn) {
+  const content = btn.nextElementSibling;
+  document.querySelectorAll('.menu-content').forEach(c => {
+    if (c !== content) c.style.display = "none";
   });
-
-  content.style.display =
-    content.style.display === "block" ? "none" : "block";
+  content.style.display = content.style.display === "block" ? "none" : "block";
 }
+
+let lastScroll = 0;
+const bar = document.getElementById("stickyBar");
+
+window.addEventListener("scroll", () => {
+  const current = window.pageYOffset;
+  bar.style.transform = current > lastScroll ? "translateY(100%)" : "translateY(0)";
+  lastScroll = current;
+});
 </script>
 
 </body>
 </html>
-
